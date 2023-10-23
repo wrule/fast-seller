@@ -131,6 +131,7 @@ dist
 
 output/
 .DS_Store
+secrets/
 .secret*.json
 *.csv
 *.zip
