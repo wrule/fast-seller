@@ -1,5 +1,6 @@
 
 export
 interface Seller {
-  Sell(): Promise<void>;
+  Watch(): void;
+  Sell(baseAmount: number): Promise<void>;
 }
