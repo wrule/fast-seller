@@ -1,7 +1,13 @@
-import { hello } from '.';
+import 'global-agent/bootstrap';
+import { bitget, binance } from 'ccxt';
 
-function dev() {
-  hello();
+const secret = require('../secrets/bitget.json');
+
+async function dev() {
+  const ex = new bitget(secret);
+  await ex.loadMarkets();
+  const b = await ex.fetchBalance();
+  console.log(b);
 }
 
 dev();
